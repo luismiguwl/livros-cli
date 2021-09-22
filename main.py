@@ -16,10 +16,11 @@ def main():
 	isbn = int(input('ISBN: '))
 	idioma = input('Idioma: ').rstrip().strip()
 	ano_de_lancamento = int(input('Ano de lançamento: '))
+	numero_de_paginas = int(input('Número de páginas: '))
 
 	autor = adicionar_aspas_duplas_caso_haja_mais_de_um_autor(autor)
 
-	livro = Livro(titulo, autor, editora, isbn, idioma, ano_de_lancamento)
+	livro = Livro(titulo, autor, editora, isbn, idioma, ano_de_lancamento, numero_de_paginas)
 	salvar_linha_no_arquivo_csv(livro)
 
 if __name__ == '__main__':
