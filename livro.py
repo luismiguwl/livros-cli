@@ -1,6 +1,3 @@
-from operacoes import adicionar_livro
-
-
 class Livro:
 	def __init__(self, titulo, autor, editora, isbn, idioma, ano_de_lancamento, numero_de_paginas):
 		self.titulo = titulo
