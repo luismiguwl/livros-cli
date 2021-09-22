@@ -1,27 +1,10 @@
-from livro import Livro
-
-def salvar_linha_no_arquivo_csv(livro: Livro):
-	with open('/home/luis/ondrive/livros/livros.csv', 'a') as file:
-		file.write(f"\n{livro}")
-
-def adicionar_aspas_duplas_caso_haja_mais_de_um_autor(autor):
-	if ',' in autor:
-		return f'"{autor}"'
-	return autor
+import menu
 
 def main():
-	titulo = input('Título: ').rstrip().strip()
-	autor = input('Autor: ').rstrip().strip()
-	editora = input('Editora: ').rstrip().strip()
-	isbn = int(input('ISBN: '))
-	idioma = input('Idioma: ').rstrip().strip()
-	ano_de_lancamento = int(input('Ano de lançamento: '))
-	numero_de_paginas = int(input('Número de páginas: '))
-
-	autor = adicionar_aspas_duplas_caso_haja_mais_de_um_autor(autor)
-
-	livro = Livro(titulo, autor, editora, isbn, idioma, ano_de_lancamento, numero_de_paginas)
-	salvar_linha_no_arquivo_csv(livro)
+    while True:
+        menu.exibir()        
+        opcao = menu.obter_acao_selecionada()
+        menu.executar_opcao_selecionada(opcao)
 
 if __name__ == '__main__':
 	main()
