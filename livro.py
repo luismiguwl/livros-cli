@@ -11,7 +11,7 @@ class Livro:
 	def __repr__(self):
 		return f"{self.titulo},{self.autor},{self.editora},{self.isbn},{self.idioma},{self.ano_de_lancamento},{self.numero_de_paginas}"
 
-	def adicionar_aspas_duplas_caso_haja_mais_de_um_autor(self, autor):
+	def adicionar_aspas_duplas_caso_haja_mais_de_um_autor(self):
 		if ',' in self.autor:
-			return f'"{autor}"'
-		return autor
+			return f'"{self.autor}"'
+		return self.autor
