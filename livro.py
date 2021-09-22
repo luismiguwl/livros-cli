@@ -1,4 +1,4 @@
-from script.operacoes import adicionar_livro
+from operacoes import adicionar_livro
 
 
 class Livro:
