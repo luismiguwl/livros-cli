@@ -33,7 +33,7 @@ def obter_numero_do_livro_que_sera_removido():
 
 def salvar_linha_no_arquivo_csv(linha):
     with open('/home/luis/ondrive/livros/livros.csv', 'a', encoding='utf-8') as file:
-        file.write(f"\n{linha}")
+        file.write(f"{linha}")
 
 def reescrever_arquivo_com_lista_de_livros_atualizada(livros):
     with open('/home/luis/ondrive/livros/livros.csv', 'w', encoding='utf-8') as file:
