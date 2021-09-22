@@ -1,5 +1,5 @@
 from livro import Livro
-import utils
+import arquivo
 
 def adicionar_livro():
 	titulo = input('Título: ').rstrip().strip()
@@ -11,11 +11,11 @@ def adicionar_livro():
 	numero_de_paginas = int(input('Número de páginas: '))
 
 	livro = Livro(titulo, autor, editora, isbn, idioma, ano_de_lancamento, numero_de_paginas)
-	utils.salvar_linha_no_arquivo_csv(livro)
+	arquivo.salvar_linha_no_arquivo_csv(livro)
 
 def remover_livro(posicao_do_livro):
-	livros = utils.obter_lista_de_livros()
+	livros = arquivo.obter_lista_de_livros()
  
 	del livros[posicao_do_livro - 1]
  
-	utils.reescrever_arquivo_com_lista_de_livros_atualizada(livros)
+	arquivo.reescrever_arquivo_com_lista_de_livros_atualizada(livros)
