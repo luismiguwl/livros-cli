@@ -1,6 +1,6 @@
 from arquivo import obter_lista_de_livros
             
-def obter_numero_do_livro_que_sera_removido():
+def obter_numero_do_livro_que_sera_removido() -> int:
     livros = obter_lista_de_livros()
     
     print('\n=== TÍTULOS ===')

@@ -1,7 +1,7 @@
 from livro import Livro
 import arquivo
 
-def adicionar_livro():
+def adicionar_livro() -> None:
 	titulo = input('Título: ').rstrip().strip()
 	autor = input('Autor: ').rstrip().strip()
 	editora = input('Editora: ').rstrip().strip()
@@ -13,9 +13,8 @@ def adicionar_livro():
 	livro = Livro(titulo, autor, editora, isbn, idioma, ano_de_lancamento, numero_de_paginas)
 	arquivo.salvar_linha_no_arquivo_csv(livro)
 
-def remover_livro(posicao_do_livro):
+def remover_livro(posicao_do_livro: int) -> None:
 	livros = arquivo.obter_lista_de_livros()
- 
 	del livros[posicao_do_livro - 1]
  
 	arquivo.reescrever_arquivo_com_lista_de_livros_atualizada(livros)

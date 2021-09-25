@@ -1,6 +1,6 @@
 import menu
 
-def main():
+def main() -> None:
     while True:
         menu.exibir()        
         opcao = menu.obter_acao_selecionada()
